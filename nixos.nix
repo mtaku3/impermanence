@@ -775,7 +775,7 @@ in
                 script = createNeededForBootDirs;
               };
             };
-            postDeviceCommands = mkIf (!config.boot.initrd.systemd.enable)
+            postResumeCommands = mkIf (!config.boot.initrd.systemd.enable)
               (mkAfter createNeededForBootDirs);
           };
       }
